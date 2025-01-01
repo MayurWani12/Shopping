@@ -1,0 +1,68 @@
+<nav class="navbar">
+    <div class="logo">ShoppingHub</div>
+
+    <div class="search-bar-container">
+      <input
+        type="text"
+        class="search-bar"
+        id="searchInput"
+        placeholder="Search for products..."
+      /> <ul id="searchResults"></ul>
+      <button class="search-button">Search</button>
+    </div>
+    <!-- <div id="searchResults" class="search"></div> -->
+    
+    
+    
+
+    
+    <!-- <input type="text" id="searchInput" placeholder="Search products..." /> -->
+
+  
+    
+
+    <ul class="nav-links">
+      <li><a routerLink="/google">Home</a></li>
+      <li class="dropdown">
+        <a routerLink="/admin">Categories</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/orders">Electronics</a></li>
+          <li><a routerLink="/electronic">Fashion</a></li>
+          <li><a routerLink="/electronic">Home Appliances</a></li>
+          <li><a routerLink="/electronic">Books</a></li>
+          <li><a routerLink="/electronic">Toys</a></li>
+         
+        </ul>
+        <li><a routerLink="/cart">Cart</a></li>
+        <li><a routerLink="/userorder">Orders</a></li>
+        <!-- <li><a routerLink="/contact">Contact Us</a></li> -->
+        <li class="user-icon-container" *ngIf="username; else loginPrompt">
+          <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+          <ul class="user-dropdown">
+            <li><strong>{{ username }}</strong></li>
+            <li><a style="color:red; cursor:pointer;" routerLink="/login">Logout</a></li>
+          </ul>
+        </li>
+        <ng-template #loginPrompt>
+          <li><a routerLink="/login">Log In</a></li>
+        </ng-template>
+    
+       
+
+
+      <!-- </li>
+      <div *ngIf="username; else loginPrompt">
+        <p>{{ username }}</p>
+      </div>
+      <ng-template #loginPrompt>
+        <p>log in</p>
+      </ng-template>
+
+      <li><a routerLink="/cart">Cart</a></li>
+      <li><a routerLink="/contact">Contact Us</a></li>
+      <li><a routerLink="/login" style="color:red">Logout</a></li>-->
+
+
+    </ul> 
+  </nav>
+  

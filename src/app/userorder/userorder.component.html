@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div *ngIf="orders.length > 0; else noOrders">
+  <h2 class="order-list-title" style="margin-bottom: 200px;">Order List</h2>
+  <div class="orders-container">
+    <div class="order-card" *ngFor="let order of orders">
+      <h3 class="order-header">Order #{{ orders.indexOf(order) + 1 }}</h3>
+      <div class="order-details">
+        <p><strong>Product:</strong> {{ order.productName }}</p>
+        <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+        <p><strong>Delivery Mode:</strong> {{ order.deliveryMode }}</p>
+        <p><strong>Payment Mode:</strong> {{ order.paymentMode }}</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noOrders>
+  <p class="no-orders">No orders found!</p>
+</ng-template>
+<app-footer></app-footer>

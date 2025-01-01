@@ -1,0 +1,233 @@
+/* Container for Center Alignment */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* Button Styling */
+.orders-button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Effect */
+.orders-button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Anchor Tag Inside Button */
+.orders-button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .orders-button {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    width: auto;
+  }
+}
+
+.admin-panel {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f4f7fb;
+  align-items: center;
+}
+
+
+.admin-header {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Section Styling */
+.section {
+  /* display: flex; */
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Input and Button Styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field, .select-field, .file-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn-delete {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* List Styling */
+.item-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  list-style: none;
+  padding: 0;
+  gap: 15px; /* Adds spacing between items */
+  justify-content: flex-start; /* Align items to the start of the container */
+}
+
+.item {
+  background-color: #f9f9f9; /* Light background color for the box */
+  border: 1px solid #ddd; /* Border for the box */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside each box */
+  width: calc(33% - 10px); /* Width of each box (3 items per row with some margin) */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width calculation */
+  text-align: center; /* Center the text */
+  /* transition: background-color 0.3s ease, transform 0.3s ease; Smooth transition on hover */
+}
+
+.item:hover {
+  background-color: #f1f1f1; /* Change background color on hover */
+  /* transform: translateY(-5px); Lift the item slightly on hover */
+}
+
+.item-name {
+  margin-right: 40px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold; /* Bold text for item name */
+  margin-bottom: 10px; /* Space between name and delete button */
+}
+
+
+/* Product Card Styling */
+.product-card {
+  margin-top: 40px;
+  margin-left: 50px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the content vertically */
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensures that any overflow (like images) is clipped */
+}
+
+.product-image {
+  width: 100%; /* Full width of the product card */
+  height: 120px; /* Set height for the image */
+  object-fit: cover; /* Ensures the image covers the box without stretching */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 1rem; /* Slightly smaller font for the name */
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px; /* Reduced margin for better alignment */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipsis if the name is too long */
+}
+.a{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.product-price {
+  font-size: 0.9rem; /* Slightly smaller font for price */
+  color: #777;
+}
+
+
+/* Flexbox Layout for Top Products and Bottom Categories */
+.admin-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .admin-panel {
+    padding: 10px;
+  }
+  
+  .section {
+    width: 100%;
+  }
+}

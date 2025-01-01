@@ -1,0 +1,18 @@
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: scroll;
+  scrollbar-width: none; 
+}
+
+
+::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+.aa{
+  margin-top: 60px;
+}

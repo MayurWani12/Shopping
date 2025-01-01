@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="aa">
+<div class="cart-container">
+  <h1>Your Shopping Cart</h1>
+
+  <div class="cart-items">
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <div class="cart-item-image">
+        <!-- <img [src]="item.productImage" alt="{{ item.productName }}">
+        <img [src]="'http://localhost:8083/uploads/' + item.productImage" alt="{{ item.productName }}" /> -->
+        <img [src]="getImageUrl(item.productImage)" alt="{{ item.productName }}">
+      </div>
+      <div class="cart-item-details">
+        <h3>{{ item.productName }}</h3>
+        <p class="price">₹{{ item.price }}</p>
+        <label for="quantity-{{ item.id }}">Quantity:</label>
+        <input
+          id="quantity-{{ item.id }}"
+          type="number"
+          [(ngModel)]="item.quantity"
+          min="1"
+          class="quantity-input"
+        />
+        <div class="cart-item-actions">
+            <!-- <button class="action-btn view-btn" (click)="viewProduct(item)">View Product</button> -->
+          <button class="action-btn update-btn" (click)="updateCartItem(item)">Update</button>
+          <button class="action-btn remove-btn" (click)="removeItem(item.id)">Remove</button>
+          <button class="action-btn buy-btn" (click)="buyNow(item)">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    <p><strong>Total Items:</strong> {{ cartItems.length }}</p>
+    <p><strong>Total Price:</strong> ₹{{ totalPrice }}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>
+</div>

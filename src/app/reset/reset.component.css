@@ -1,0 +1,78 @@
+body{
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+}
+.reset-password-container {
+   background-color: #2575fc;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading styles */
+  .reset-password-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Input field styles */
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    transition: border 0.3s;
+  }
+  
+
+  .input-field:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Submit button styles */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for the submit button */
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+
+  @media (max-width: 480px) {
+    .reset-password-container {
+      padding: 15px;
+    }
+  
+    .input-field {
+      font-size: 14px;
+    }
+  
+    .submit-btn {
+      font-size: 14px;
+    }
+  }
+  

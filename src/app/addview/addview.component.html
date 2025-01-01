@@ -1,0 +1,81 @@
+<!-- <div class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="image-container">
+        <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+      <div class="product-actions">
+        <button class="buy-now-btn" [routerLink]="['/produc', product.name]">View Product</button>
+      </div>
+    </div>
+  </div>
+   -->
+
+<!-- 
+   <div class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="image-container">
+        <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+      <div class="product-actions">
+        <button [routerLink]="['/produc', product.id]">View Product</button>
+      </div>
+    </div>
+  </div>
+   -->
+
+<!-- 
+
+   <div class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="image-container">
+        <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+      <div class="product-actions">
+        <button class="view-product-button" [routerLink]="['/produc', product.name]">
+          View Product
+        </button>
+      </div>
+    </div>
+  </div>
+   -->
+   <!-- <div class="shopping-page">
+   <div class="products-grid" style="margin-bottom: 20px;">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="image-container">
+ 
+        <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+      <div class="product-actions">
+        <button class="buy-now-btn" [routerLink]="['/produc', product.name]">View Product</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="products-section">
+ 
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="image-container">
+        
+        <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+      <div class="product-actions">
+        <button class="buy-now-btn" [routerLink]="['/produc', product.name]">View Product</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

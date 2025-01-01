@@ -1,0 +1,47 @@
+<!-- <div class="product-detail" *ngIf="product">
+    <div class="image-container">
+      <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+    </div>
+    <h2>{{ product.name }}</h2>
+    <p class="price">₹{{ product.price }}</p>
+    <div class="actions">
+      <button >Buy Now</button>
+      <button >Add to Cart</button>
+    </div>
+  </div> -->
+  
+
+<app-navbar></app-navbar>
+<div class="aa">
+  <div class="product-detail" *ngIf="product">
+    <div class="product-detail-container">
+      <div class="product-image">
+        <img [src]="'http://localhost:8083/uploads/' + product.image" alt="{{ product.name }}" />
+      </div>
+      <div class="product-info">
+        <h1 class="product-name">{{ product.name }}</h1>
+        <div class="price-section">
+          <p class="deal-price">₹{{ product.price }}</p>
+          <p class="original-price">M.R.P.: ₹{{ product.price + 1000 }}</p>
+          <p class="savings">
+            You Save: ₹{{ 1000 }}
+            ({{ ((1000 / (product.price + 1000)) * 100).toFixed(1) }}% Off)
+          </p>
+        </div>
+        <div class="delivery-details">
+          <h3>Delivery:</h3>
+          <p>Expected Delivery: <strong>In 3 Days</strong></p>
+        </div>
+        <div class="payment-options">
+          <h3>Payment Details:</h3>
+          <p>EMI starts at ₹1,599. No Cost EMI available</p>
+          <p>Payment Modes: Credit Card, Debit Card, UPI, Net Banking</p>
+        </div>
+        <div class="action-buttons">
+          <button class="buy-now-btn" (click)="buyNow()">Buy Now</button>
+          <button class="add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <app-footer></app-footer>

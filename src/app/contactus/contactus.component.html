@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+
+<div class="aa">
+<div class="contact-container">
+    <header class="header">
+      <h1>Contact Us</h1>
+      <p>Please suggest us new things and give the feedback.</p>
+    </header>
+  
+    <div class="content">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><strong>Address:</strong> Woratech Baner,pune Haveli</p>
+        <p><strong>Phone:</strong> +91 987654334</p>
+        <p><strong>Email:</strong> ShoppingHub.com</p>
+        <br>
+        <h1>About Us</h1>
+        <p>ShoppingHub is your one-stop destination for the latest gadgets,<br> fashion, and more. We aim to provide top-quality products with <br>excellent customer service.<</p>
+      </div>
+  
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              [(ngModel)]="formData.name" 
+              placeholder="Enter your name"
+              class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              [(ngModel)]="formData.email" 
+              placeholder="Enter your email"
+              class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              required 
+              [(ngModel)]="formData.message" 
+              placeholder="Type your message here"
+              class="form-control"></textarea>
+          </div>
+  
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<app-footer></app-footer>
