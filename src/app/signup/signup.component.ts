@@ -51,7 +51,7 @@ export class SigupComponent implements OnInit {
       (googleUser: any) => this.handleGoogleSignIn(googleUser),
       (error: any) => {
         console.error('Google Sign-In error:', error);
-        // this.errorMessage = 'Google Sign-In failed. Please try again.';
+      
       }
     );
   }

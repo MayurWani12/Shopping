@@ -11,14 +11,14 @@ export class Pr {
 
   constructor(private http: HttpClient) {}
 
-  // Existing method to get all products
+ 
   getProducts() {
     return this.http.get<any[]>(this.apiUrl);
   }
 
   
 
-  // New method to get product by name
+
   getProductByName(name: string) {
     return this.http.get<any>(`${this.apiUrl}/${name}`);
   }

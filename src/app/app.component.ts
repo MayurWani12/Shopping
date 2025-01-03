@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
 ngOnInit(): void {
   this.router.events.subscribe((event) => {
     if (event instanceof NavigationEnd) {
-      // Scroll to top when the route changes
+     
       this.viewportScroller.scrollToPosition([0, 0]);
     }
   });

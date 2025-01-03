@@ -1,4 +1,4 @@
-/* Global Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -17,7 +17,7 @@ body {
     text-decoration: underline;
   }
   
-  /* Hero Section */
+
   .hero-section {
     background: url('https://www.shutterstock.com/image-photo/privacy-policy-icon-cyber-security-internet-260nw-1839631858.jpg') no-repeat center center;
     background-size: cover;
@@ -55,7 +55,7 @@ body {
     font-size: 1.2rem;
   }
   
-  /* Policy Content Section */
+
   .policy-content {
     padding: 40px 20px;
     background: #fff;
@@ -93,7 +93,7 @@ body {
     font-weight: bold;
   }
   
-  /* Footer */
+ 
   .footer {
     background: #333;
     color: white;

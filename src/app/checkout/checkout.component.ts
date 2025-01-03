@@ -226,7 +226,7 @@ export class CheckoutComponent implements OnInit {
       return imagePath; // Full URL
     }
     // return `http://localhost:8083/uploads/${imagePath}`;
-    return `http://localhost:8083/upload/${imagePath}`;
+    return `http://localhost:8083/uploads/${imagePath}`;
   }
 
   confirmOrder(): void {

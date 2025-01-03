@@ -1,4 +1,4 @@
-/* Main container for the checkout page */
+
 .checkout-container {
     max-width: 800px;
     margin: 20px auto;
@@ -8,7 +8,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Title of the order summary */
+
   .order-summary-title {
     font-size: 24px;
     font-weight: bold;
@@ -17,7 +17,7 @@
     color: #333;
   }
   
-  /* Product summary section */
+ 
   .product-summary {
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@
     color: #e74c3c;
   }
   
-  /* Section for selecting delivery mode, payment, and other fields */
+
   .section {
     margin-bottom: 20px;
   }
@@ -74,17 +74,17 @@
     box-sizing: border-box;
   }
   
-  /* Text area for shipping address */
+ 
   .address-textarea {
     height: 100px;
   }
   
-  /* Contact information input field */
+ 
   .input-field {
     height: 40px;
   }
   
-  /* Button styles */
+
   .place-order-button {
     background-color: #3498db;
     color: white;

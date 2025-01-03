@@ -110,7 +110,7 @@ export class ElectronicComponent implements OnInit {
       productName: this.product.name,
       productImage: this.product.image,
       price: this.product.price,
-      quantity: 1 // Default quantity
+      quantity: 1 
     };
   
     this.http.post('http://localhost:8083/api/cart', cartItem).subscribe(

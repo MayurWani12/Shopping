@@ -152,35 +152,6 @@ export class ProductdetailComponent implements OnInit {
 
 
 
-  // addToCart(): void {
-  //   const cartItem = {
-  //     productId: this.product.id,
-  //     productName: this.product.name,
-  //     productImage: this.product.image,
-  //     price: this.product.price,
-  //     quantity: 1 
-  //   };
-  
-  //   this.http.post('http://localhost:8083/api/cart', cartItem).subscribe(
-  //     (response) => {
-  //       alert('Product added to cart!');
-  //     },
-  //     // (error) => {
-  //     //   console.error('Error adding product to cart:', error);
-  //     //   alert('Failed to add product to cart.');
-  //     // }
-
-  //     (error) => {
-  //       console.error('Error adding product to cart:', error);
-  //       alert('Failed to add product to cart. ' + (error.message || error));
-  //     }
-      
-
-  //   );
-  // }
-
-
-
 
 addToCart(): void {
     const cartItem = {
@@ -191,7 +162,7 @@ addToCart(): void {
       quantity: 1 
     };
   
-    const userId = 1; // Replace with actual logged-in user ID
+    const userId = 1; 
   
     this.http.post(`http://localhost:8083/api/cart/add/${userId}`, cartItem).subscribe(
       (response) => {
@@ -210,51 +181,6 @@ addToCart(): void {
   
 
 
-
-//   this.http.post('http://localhost:8083/api/cart', cartItem).subscribe(
-//     (response) => {
-//       alert('Product added to cart!');
-//     },
-//     (error) => {
-//       console.error('Error adding product to cart:', error);
-//       if (error.status === 0) {
-//         alert('Failed to connect to the server. Please check your network or server status.');
-//       } else {
-//         alert(`Failed to add product to cart. Error: ${error.message}`);
-//       }
-//     }
-//   );
-// }
-
-
-  // addToCart(): void {
-  //   const cartItem = {
-  //     productId: this.product.name, // Replace 'id' with 'name' or another unique identifier
-  //     productName: this.product.name,
-  //     productImage: this.product.image,
-  //     price: this.product.price,
-  //     quantity: 1 // Default quantity
-  //   };
-  
-  //   console.log('Adding to cart:', cartItem); // Debugging
-  //   this.http.post('http://localhost:8083/api/cart', cartItem).subscribe(
-  //     (response) => {
-  //       console.log('Response:', response); // Debugging
-  //       alert('Product added to cart!');
-  //     },
-  //     (error) => {
-  //       console.error('Error adding product to cart:', error);
-  //       alert('Failed to add product to cart.');
-  //     }
-  //   );
-  // }
-  
-  
-  // Generate a fallback ID using the product name
-  // private generateId(name: string): string {
-  //   return name.replace(/\s+/g, '-').toLowerCase(); // Generate slug-like ID
-  // }
-  
   
   buyNow(): void {
     this.router.navigate(['/checkout'], { state: { product: this.product } });
@@ -263,76 +189,3 @@ addToCart(): void {
 }
 
 
-
-// productdetail.component.ts
-// import { Component, OnInit } from '@angular/core';
-// import { ActivatedRoute, Router } from '@angular/router';
-// import { HttpClient } from '@angular/common/http';
-// import { CommonModule } from '@angular/common';
-// import { NavbarComponent } from '../navbar/navbar.component';
-// import { FooterComponent } from '../footer/footer.component';
-
-// @Component({
-//   selector: 'app-productdetail',
-//   standalone: true,
-//   imports: [CommonModule, NavbarComponent, FooterComponent],
-//   templateUrl: './productdetail.component.html',
-//   styleUrls: ['./productdetail.component.css']
-// })
-// export class ProductdetailComponent implements OnInit {
-//   product: any;
-//   remainingProducts: any[] = [];
-
-//   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) {}
-
-//   ngOnInit() {
-//     const productName = this.route.snapshot.params['id']; // Get the product name from the route
-//     this.getProductDetail(productName); // Fetch the product details based on the name
-
-//     // Fetch remaining products (for the related products section)
-//     this.getRemainingProducts();
-//   }
-
-//   getProductDetail(productName: string): void {
-//     this.http.get(`http://localhost:8083/api/products/${productName}`).subscribe(
-//       (data: any) => {
-//         this.product = data; // Store the fetched product details
-//       },
-//       (error) => {
-//         console.error('Error fetching product details:', error);
-//         this.router.navigate(['/products']); // Redirect to product list on error
-//       }
-//     );
-//   }
-
-//   getRemainingProducts(): void {
-//     this.http.get('http://localhost:8083/api/products').subscribe(
-//       (data: any[]) => {
-//         this.remainingProducts = data; // Get related products for display
-//       },
-//       (error) => {
-//         console.error('Error fetching remaining products:', error);
-//       }
-//     );
-//   }
-
-//   addToCart(): void {
-//     const cartItem = {
-//       productId: this.product.id,
-//       productName: this.product.name,
-//       productImage: this.product.image,
-//       price: this.product.price,
-//       quantity: 1, // Default quantity
-//     };
-
-//     this.http.post('http://localhost:8083/api/cart', cartItem).subscribe(
-//       (response) => {
-//         alert('Product added to cart!');
-//       },
-//       (error) => {
-//         console.error('Error adding product to cart:', error);
-//         alert('Failed to add product to cart.');
-//       }
-//     );
-//   }
-// }

@@ -16,32 +16,13 @@ import { AddviewComponent } from "../addview/addview.component";
 export class HComponent implements OnInit {
 
 
-  searchTerm: string = ''; // Define a property to store the search term
+  searchTerm: string = ''; 
 
   onSearch(searchTerm: string): void {
-    this.searchTerm = searchTerm; // Store the search term in the property
+    this.searchTerm = searchTerm; 
   }
 
- 
-  // categories = [
-  //   { name: 'Electronics', image: 'assets/electronics.jpg' },
-  //   { name: 'Fashion', image: 'assets/fashion.jpg' },
-  //   { name: 'Home Appliances', image: 'assets/home.jpg' },
-  //   { name: 'Books', image: 'assets/books.jpg' },
-  //   { name: 'Sports', image: 'assets/sports.jpg' },
-  //   { name: 'Toys', image: 'assets/toys.jpg' }
-  // ];
 
-  // products = [
-  //   { name: 'Smartphone', price: 999, image: 'assets/product1.jpg' },
-  //   { name: 'Laptop', price: 1299, image: 'assets/product2.jpg' },
-  //   { name: 'Headphones', price: 199, image: 'assets/product3.jpg' },
-  //   { name: 'Watch', price: 299, image: 'assets/product4.jpg' },
-  //   { name: 'Shoes', price: 89, image: 'assets/product5.jpg' },
-  //   { name: 'Backpack', price: 49, image: 'assets/product6.jpg' },
-    
-  //   // Add more products as needed
-  // ];
 
 
   

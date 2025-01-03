@@ -1,35 +1,4 @@
-<!-- <div *ngIf="orders.length > 0; else noOrders">
-    <h2>Order List</h2>
-    <ul>
-      <li *ngFor="let order of orders">
-        <strong>Product:</strong> {{ order.productName }},
-        <strong>Quantity:</strong> {{ order.quantity }},
-        <strong>Delivery Mode:</strong> {{ order.deliveryMode }}
-      </li>
-    </ul>
-  </div>
-  <ng-template #noOrders>
-    <p>No orders found!</p>
-  </ng-template>
-   -->
 
-   <!-- <div *ngIf="orders.length > 0; else noOrders">
-    <h2>Order List</h2>
-    <ul>
-      <li *ngFor="let order of orders">
-        <strong>Product:</strong> {{ order.productName }},
-        <strong>Quantity:</strong> {{ order.quantity }},
-        <strong>Delivery Mode:</strong> {{ order.deliveryMode }},
-        <strong>Payment Mode:</strong> {{ order.paymentMode }},
-        <strong>Address:</strong> {{ order.address }},
-        <strong>Contact Info:</strong> {{ order.contactInfo }}
-      </li>
-    </ul>
-  </div>
-  <ng-template #noOrders>
-    <p>No orders found!</p>
-  </ng-template>
-   -->
 <app-navbar></app-navbar>
 <div class="w">   
   <div *ngIf="orders.length > 0; else noOrders" > 

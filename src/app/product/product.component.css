@@ -22,8 +22,8 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  z-index: 2; /* Ensure buttons are on top of the images */
-  transition: background 0.3s ease; /* Add transition for smooth background change */
+  z-index: 2; 
+  transition: background 0.3s ease;
 }
 
 
@@ -36,7 +36,7 @@
   right: 50px; 
 }
 
-/* Hover Effect */
+
 .slider-btn:hover {
   background: rgba(0, 0, 0, 0.7);
   transition: background 0.3s ease-in-out;
@@ -107,7 +107,7 @@
   }
   
   .category-card:hover {
-    /* transform: translateY(-5px); */
+   
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -163,7 +163,7 @@
   }
   
   .product-card {
-    /* margin-bottom: 20px; */
+  
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -192,9 +192,7 @@
     transition: transform 0.3s ease;
   }
   
-  /* .product-card:hover img {
-    /* transform: scale(0.1); */
-  /* } */ 
+
   
   .product-card h3 {
     font-size: 1.1rem;
@@ -225,7 +223,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9rem;
-    /* transition: background-color 0.3s ease, box-shadow 0.3s ease; */
+   
   }
   
   .add-to-cart-btn:hover,

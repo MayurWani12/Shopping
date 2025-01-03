@@ -1,217 +1,10 @@
-<!-- <app-navbar></app-navbar>
-<div *ngIf="product" class="checkout-container">
-    <h2 class="order-summary-title">Order Summary</h2>
-    
-    
-    <div class="product-summary">
-      <img class="product-image" [src]="product.image" alt="{{ product.name }}" />
-      <div class="product-details">
-        <h3 class="product-name">{{ product.name }}</h3>
-        <p class="product-description">{{ product.description }}</p>
-        <p class="product-price">Price: {{ product.price | currency }}</p>
-      </div>
-    </div>
-  
-  
-    <div class="section">
-      <label for="delivery-mode" class="section-title">Choose Delivery Mode</label>
-      <select id="delivery-mode" [(ngModel)]="deliveryMode" class="select-input">
-        <option value="standard">Standard Delivery (5-7 Days)</option>
-        <option value="express">Express Delivery (1-2 Days)</option>
-        <option value="same-day">Same Day Delivery</option>
-      </select>
-    </div>
-  
-  
-    <div class="section">
-      <label for="payment-mode" class="section-title">Choose Payment Mode</label>
-      <select id="payment-mode" [(ngModel)]="paymentMode" class="select-input">
-        <option value="credit-card">Credit Card</option>
-        <option value="paypal">PayPal</option>
-        <option value="cod">Cash on Delivery</option>
-      </select>
-    </div>
-  
-   
-    <div class="section">
-      <label for="address" class="section-title">Shipping Address</label>
-      <textarea id="address" [(ngModel)]="address" class="address-textarea" placeholder="Enter your shipping address"></textarea>
-    </div>
-  
-    
-    <div class="section">
-      <label for="contact" class="section-title">Contact Information</label>
-      <input type="text" id="contact" [(ngModel)]="contactInfo" class="input-field" placeholder="Enter your phone number" />
-    </div>
-  
-       <div class="order-summary-action">
-      <button (click)="placeOrder()" class="place-order-button">Place Order</button>
-    </div>
-  </div>
-  <app-footer></app-footer> -->
+
 
 
 
 
   <app-navbar></app-navbar><div class="aa">
-<!-- <div *ngIf="product" class="checkout-container">
-  <h2 class="order-summary-title">Order Summary</h2>
 
-
-  <div class="product-summary">
-
-
-    <img class="product-image" [src]="getImageUrl(product.image)" alt="{{ product.name }}" />
-    
-    <div class="product-details">
-      <h3 class="product-name">{{ product.name }}</h3>
-      <p class="product-description">{{ product.description }}</p>
-      <p class="product-price">Price: {{ product.price | currency }}</p>
-      <div class="quantity-section">
-        <label for="quantity" class="section-title">Quantity:</label>
-        <input
-          type="number"
-          id="quantity"
-          [(ngModel)]="quantity"
-          (input)="updateTotalPrice()"
-          class="quantity-input"
-          min="1"
-        />
-      </div>
-      
-    </div>
-  </div>
-
-  
-  <div class="section">
-    <label for="delivery-mode" class="section-title">Choose Delivery Mode</label>
-    <select id="delivery-mode" [(ngModel)]="deliveryMode" class="select-input">
-      <option value="standard">Standard Delivery (5-7 Days)</option>
-      <option value="express">Express Delivery (1-2 Days)</option>
-      <option value="same-day">Same Day Delivery</option>
-    </select>
-  </div>
-
- 
-  <div class="section">
-    <label for="payment-mode" class="section-title">Choose Payment Mode</label>
-    <select id="payment-mode" [(ngModel)]="paymentMode" class="select-input">
-      <option value="credit-card">Rozarpay</option>
-      <option value="paypal">PayPal</option>
-      <option value="cod">Cash on Delivery</option>
-    </select>
-  </div>
-
-
-  <div class="section">
-    <label for="address" class="section-title">Shipping Address</label>
-    <textarea
-      id="address"
-      [(ngModel)]="address"
-      class="address-textarea"
-      placeholder="Enter your shipping address"
-    ></textarea>
-  </div>
-
-  
-  <div class="section">
-    <label for="contact" class="section-title">Contact Information</label>
-    <input
-      type="text"
-      id="contact"
-      [(ngModel)]="contactInfo"
-      class="input-field"
-      placeholder="Enter your phone number"
-    />
-  </div>
-
- 
-  <div class="order-summary-action">
-    <button (click)="placeOrder()" class="place-order-button">Place Order</button>
-  </div>
-</div></div> -->
-
-<!-- 
-<app-navbar></app-navbar>
-<div class="aa">
-  <div *ngIf="product" class="checkout-container">
-    <h2 class="order-summary-title">Order Summary</h2>
-
-    <div class="product-summary">
-      <img
-        class="product-image"
-        [src]="getImageUrl(product.image)"
-        alt="{{ product.name }}"
-      />
-      <div class="product-details">
-        <h3 class="product-name">{{ product.name }}</h3>
-        <p class="product-description">{{ product.description }}</p>
-        <p class="product-price">Price: {{ product.price | currency }}</p>
-        <div class="quantity-section">
-          <label for="quantity" class="section-title">Quantity:</label>
-          <input
-            type="number"
-            id="quantity"
-            [(ngModel)]="quantity"
-            class="quantity-input"
-            min="1"
-          />
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <label for="delivery-mode" class="section-title">Choose Delivery Mode</label>
-      <select id="delivery-mode" [(ngModel)]="deliveryMode" class="select-input">
-        <option value="standard">Standard Delivery (5-7 Days)</option>
-        <option value="express">Express Delivery (1-2 Days)</option>
-        <option value="same-day">Same Day Delivery</option>
-      </select>
-    </div>
-
-    <div class="section">
-      <label for="payment-mode" class="section-title">Choose Payment Mode</label>
-      <select id="payment-mode" [(ngModel)]="paymentMode" class="select-input">
-        <option value="credit-card">Credit Card</option>
-        <option value="paypal">PayPal</option>
-        <option value="cod">Cash on Delivery</option>
-      </select>
-    </div>
-
-    <div class="section">
-      <label for="address" class="section-title">Shipping Address</label>
-      <textarea
-        id="address"
-        [(ngModel)]="address"
-        class="address-textarea"
-        placeholder="Enter your shipping address"
-      ></textarea>
-    </div>
-
-    <div class="section">
-      <label for="contact" class="section-title">Contact Information</label>
-      <input
-        type="text"
-        id="contact"
-        [(ngModel)]="contactInfo"
-        class="input-field"
-        placeholder="Enter your phone number"
-      />
-    </div>
-
-    <div class="order-summary-action">
-      <button (click)="placeOrder()" class="place-order-button">
-        Place Order
-      </button>
-    </div>
-  </div>
-</div>
-<app-footer></app-footer>
-
-
-
-</div>
-<app-footer></app-footer> -->
 
 <app-navbar></app-navbar>
 <div class="aa">
@@ -319,14 +112,14 @@
       </div>
     </div>
 
-    <!-- First Confirmation Step -->
+   
     <div class="order-summary-action" *ngIf="!orderConfirmed">
       <button type="button" (click)="confirmOrder()" class="place-order-button">
         Confirm Order
       </button>
     </div>
 
-    <!-- Second Confirmation Step -->
+  
     <div *ngIf="orderConfirmed">
       <button type="button" (click)="placeOrder()" class="place-order-button">
         Confirm and Place Order

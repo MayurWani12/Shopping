@@ -34,7 +34,7 @@ export class ForgetComponent {
           } else if (error.status === 500) {
             alert('Internal server error. Please try again later.');
           } else {
-            // alert('Error sending reset link.');
+           
           }
         }
       });

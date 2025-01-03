@@ -14,11 +14,11 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   signup(user: any): Observable<any> {
-    console.log('Sending signup request:', user); // Debugging request
+    console.log('Sending signup request:', user); 
     return this.http.post(`${this.apiUrl}/signup`, user, { responseType: 'text' }).pipe(
       catchError((error) => {
-        console.error('Error during signup:', error); // Log backend error
-        const errorMsg = error.error || 'Signup failed.'; // Handle string errors
+        console.error('Error during signup:', error); 
+        const errorMsg = error.error || 'Signup failed.'; 
         return throwError(() => new Error(errorMsg));
       })
     );
@@ -27,19 +27,15 @@ export class UserService {
   login(user: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, user).pipe(
       catchError((error) => {
-        console.error('Error during login:', error); // Log backend error
+        console.error('Error during login:', error);
         const errorMsg = error.error || 'Login failed.';
         return throwError(() => new Error(errorMsg));
       })
     );
   }
   
-// 
 
 
-
-
-// 
 
 
   setUsername(username: string): void {
@@ -57,7 +53,7 @@ export class UserService {
     );
   }
   googleSignupOrLogin(token: string): Observable<any> {
-    // Send the Google token to your backend for verification and login/signup
+    
     return this.http.post(`${this.apiUrl}/google-signup-login`, { token });
   }
   forgotPassword(email: string) {

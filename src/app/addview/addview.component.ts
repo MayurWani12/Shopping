@@ -17,19 +17,19 @@ export class AddviewComponent implements OnInit{
   constructor(private productService: ProdService) {}
 
   ngOnInit(): void {
-    // Subscribe to product updates
+    
     this.productService.products$.subscribe((data) => {
       this.products = data;
     });
 
-    // Initial load of products
+  
     this.productService.refreshProducts();
   }
 
   loadProducts(): void {
     this.productService.getProducts().subscribe(
       (data: any[]) => {
-        this.products = data; // Update the product list
+        this.products = data; 
       },
       (error) => {
         console.error('Error fetching products:', error);
